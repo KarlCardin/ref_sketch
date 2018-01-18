@@ -1,9 +1,3 @@
-/*
-Purpose: find the minimum and maximum values of an array of
-data values
-Dr. Purdum, Nov. 22, 2014
-*/
-
 #include <stdio.h>
 int todaysReadings[] = { 62, 64, 65, 80, 59};
 
