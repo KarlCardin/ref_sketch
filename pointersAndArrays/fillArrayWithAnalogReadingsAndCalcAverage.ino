@@ -1,4 +1,4 @@
-#define arrayLength 15
+#define arrayLength 5
 int photoReadPin  = 0, photoPowerPin  = 5, startTime = 0;
 float ave;
 int readings[arrayLength]; 
@@ -35,8 +35,8 @@ float makeReadings (int readPin, int powpin, int *value)
   float sum = 0;
   for (int i = 0; i<arrayLength; i ++)
     {
-       *(value+i) = analogRead(0);
-       sum += *value+i;
+       *(value+i) = analogRead(readPin);
+       sum += *(value+i);
     }
   float ave = sum/arrayLength;
   digitalWrite(powpin,LOW);
@@ -66,7 +66,6 @@ void printValues(int *value, float ave)
   Serial.print("] ave=");
   Serial.println(ave);  
 }
-
 
 
  
