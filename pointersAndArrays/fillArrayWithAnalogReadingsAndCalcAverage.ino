@@ -52,12 +52,12 @@ float ave the average of all the values in the readings array
 Return value:
 n/a
 *****/
-void printValues(int *readings, float ave)
+void printValues(int *value, float ave)
 {
   Serial.print("[");
     for(int i = 0; i < arrayLength ; i++)
     {
-      Serial.print(*(readings+i));
+      Serial.print(*(value+i));
       if(i < arrayLength-1)
       {
       Serial.print(", ");
@@ -66,6 +66,7 @@ void printValues(int *readings, float ave)
   Serial.print("] ave=");
   Serial.println(ave);  
 }
+
 
 
  
